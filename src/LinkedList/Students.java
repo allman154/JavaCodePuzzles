@@ -1,8 +1,6 @@
-import java.util.LinkedList;
-
+package LinkedList;
 public class Students {
 
-    private LinkedList studentList = new LinkedList<Student>();
     private Student firstStudent;
 
     public Students() {
@@ -56,17 +54,25 @@ public class Students {
         Student curStu = firstStudent;
         Student nextStu;
         while (curStu != null) {
-            //assign next variable
+            // assign next variable
             nextStu = curStu.nextStudent;
-            //swap the pointer, have current point to previous, not next. 
+            // swap the pointer, have current point to previous, not next.
             curStu.nextStudent = prevStu;
-            //now that the pointers are swapped...
-            //we move down the list - previous = current
+            // now that the pointers are swapped...
+            // we move down the list - previous = current
             prevStu = curStu;
-            //then move current = next
+            // then move current = next
             curStu = nextStu;
         }
-        //out of the loop we reassign HEAD to the last PREV in the recursion.
+        // out of the loop we reassign HEAD to the last PREV in the recursion.
         firstStudent = prevStu;
+    }
+
+    public Student getFirstStudent() {
+        return firstStudent;
+    }
+
+    public void setFirstStudent(Student firstStudent) {
+        this.firstStudent = firstStudent;
     }
 }

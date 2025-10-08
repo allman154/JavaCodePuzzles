@@ -1,3 +1,6 @@
+import LinkedList.Students;
+import LongestSubstring.LongestSubString;
+
 public class Exercises {
 
     public Exercises() {
@@ -9,8 +12,10 @@ public class Exercises {
             switch (exercise) {
                 case "linked":
                     linkedList();
-                case "node":
-
+                    break;
+                case "substring":
+                    longestSubString();
+                    break;
                 default:
                     System.out.println("Nothing to Run.");
             }
@@ -43,5 +48,13 @@ public class Exercises {
 
         // display altered list
         studentList.displayStudentList();
+    }
+
+    private void longestSubString()
+    {
+        LongestSubString longestSubString = new LongestSubString();
+        int maxLength = longestSubString.findLongestSubstring("ababbcbabcdefgbbc");
+        System.out.println("Longest Substring: " + maxLength);
+
     }
 }

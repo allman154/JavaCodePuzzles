@@ -6,6 +6,6 @@ public class App {
          * Linked List: linked
          * Node: node
          */
-        exercises.runExercise("linked");
+        exercises.runExercise("substring");
     }
 }

@@ -1,3 +1,4 @@
+package LinkedList;
 public class Student {
     int studentId;
     Student nextStudent;
